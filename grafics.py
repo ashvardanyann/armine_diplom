@@ -32,6 +32,10 @@ def orbit_plot(orbit: Orbit):
     y = r * np.outer(np.sin(u), np.sin(v))
     z = r * np.outer(np.ones(np.size(u)), np.cos(v))
 
+    print('x', 'y', 'z')
+    for index in range(len(x)):
+        print(x[index], y[index], z[index])
+
     # Отображаем сферу
     earth = ax.plot_surface(x, y, z, color='b', alpha=0.3, label='Земля')
 
